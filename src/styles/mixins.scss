@@ -1,0 +1,31 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// Mobile first
+
+@mixin vp-500 {
+  @media (min-width: $vp-500) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
+
+@mixin vp-1260 {
+  @media (min-width: $vp-1260) {
+    @content;
+  }
+}
+
+@mixin vp-1600 {
+  @media (min-width: $vp-1600) {
+    @content;
+  }
+}

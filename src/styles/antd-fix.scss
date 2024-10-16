@@ -1,0 +1,82 @@
+.ant-modal,
+.ant-segmented,
+.ant-pagination,
+.ant-drawer,
+.ant-tabs,
+.ant-btn {
+  font-family: $ff-tilda;
+}
+
+.ant-menu-submenu-title {
+  display: flex !important;
+}
+
+.ant-menu-title-content {
+  order: 1;
+}
+
+.anticon.anticon-caret-down.ant-menu-item-icon {
+  order: 2;
+  padding-left: 5px;
+}
+
+.catalogCardModal__tabs {
+  font-size: $fz-s;
+  
+  @include vp-500 {
+    
+    & .ant-tabs-tab {
+      margin-left: 25px !important;
+      font-size: calc($fz-m - 2px);
+      
+      & .ant-tabs-tab-icon {
+        margin-right: 5px !important;
+      }
+    }
+  }
+
+  @include vp-768 {
+    font-size: calc($fz-m - 2px);
+  }
+
+  & .ant-tabs-nav-list {
+    margin: 0 auto !important;
+  }
+}
+
+.ant-drawer-body {
+  padding-bottom: 80px !important;
+}
+
+.header__drawer .ant-drawer-header .ant-drawer-header-title {
+  flex-direction: row-reverse;
+}
+
+.header__drawer .ant-drawer-header .ant-drawer-close {
+  margin-right: 0;
+  aspect-ratio: 1/1;
+}
+
+.header__drawer .ant-drawer-header .ant-drawer-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateX(10px);
+}
+
+.callMeBack__modal {
+  & .ant-modal-header {
+    margin-bottom: 20px;
+  }
+}
+
+/* Блокировка скролла при открытом Drawer */
+.drawer-open {
+  overflow: hidden;
+}
+
+.productCardModal {
+  width: auto !important;
+  max-width: 1000px !important;
+}
