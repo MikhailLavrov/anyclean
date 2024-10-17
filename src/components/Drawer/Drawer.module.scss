@@ -1,0 +1,29 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/global.scss';
+
+.burger {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  top: 18px;
+  right: 13px;
+
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    background-color: $base-light-color;
+    box-shadow: 0 -6px 0 0 $base-light-color, 0 6px 0 0 $base-light-color;
+  }
+}
