@@ -1,6 +1,7 @@
-@import 'swiper/css/bundle';
-@import './vars.scss';
-@import './fonts.scss';
-@import './global.scss';
-@import './mixins.scss';
-@import './antd-fix.scss';
+// @use 'swiper/css/bundle';
+@forward '_vars';
+@forward '_mixins';
+
+@use 'fonts';
+@use 'global';
+@use 'antd-fix';

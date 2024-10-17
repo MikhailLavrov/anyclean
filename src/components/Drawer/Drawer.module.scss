@@ -1,6 +1,6 @@
-@import '../../styles/vars.scss';
-@import '../../styles/mixins.scss';
-@import '../../styles/global.scss';
+
+@use '../../styles/_vars' as *; 
+@use '../../styles/_mixins' as *;
 
 .burger {
   padding: 0;
