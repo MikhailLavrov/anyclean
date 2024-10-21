@@ -2,10 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import LayoutComponent from './components/Layout/Layout';
+import { HeroComponent } from './components/Hero/Hero';
+import { SpecialComponent } from './components/Special/Special';
 
 const MainPage = () => {
   return (
-    <div className="App">
+    <div className="App" id='services'>
+      <HeroComponent />
+      <SpecialComponent />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

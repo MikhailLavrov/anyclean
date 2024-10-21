@@ -1,0 +1,145 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.callback {
+  padding: 20px;
+
+  font-family: var(--ff-tilda);
+  
+  background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.callback__submitCover {
+  height: 100%;
+  min-height: 151px;
+  
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.callback__submitTitle {
+  font-weight: 500;
+  user-select: none;
+}
+
+.form {
+  width: 100%;
+  /* max-width: 350px; */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  
+  & label {
+    padding: 10px 0;
+    
+    display: flex;
+    flex-direction: column;
+    
+    user-select: none;
+
+    & small {
+      color: var(--color-red);
+      font-size: var(--fz-s);
+    }
+  }
+
+  & .form__agreementLabel {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 5px;
+    font-size: calc(var(--fz-s) - 3px);
+    color: var(--base-light-color);
+
+    & input {
+      width: auto;
+    }
+
+    & .form__error {
+     grid-column: 1/-1; 
+    }
+  }
+
+  & input,
+  & textarea {
+    padding: 10px;
+
+    width: 100%;
+    
+    display: block;
+    box-sizing: border-box;
+    
+    font-size: var(--fz-s);
+    line-height: 1;
+    font-family: var(--ff-tilda);
+    
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--color-grey);
+    
+    &::placeholder {
+      color: var(--color-grey);
+    }
+  }
+  
+  & input[type="submit"] {
+    margin-bottom: 0;
+    padding: 10px 30px;
+
+    width: 100%;
+    
+    font-size: var(--fz-s);
+    font-family: var(--ff-tilda);
+    font-weight: 500;
+    color: var(--base-light-color);
+    
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-red);
+    background: linear-gradient(to right bottom, var(--color-red), var(--color-orange));
+    box-shadow: 0 3px 5px 0px rgba(var(--base-dark-color), 0.3);
+    
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  
+  
+    &:hover {
+      color: var(--base-light-color);
+
+      background-color: var(--color-red-light);
+      opacity: 0.9;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      user-select: none;
+      /* opacity: 0.5; */
+    }
+
+    /* @include vp-1260 {
+      font-size: calc(var(--fz-m) - 3px);
+    } */
+  }
+
+  & textarea {
+    resize: none;
+    height: 80px;
+  }
+}
+
+.form__inputTitle {
+  margin-bottom: 10px;
+}
+
+.form__error {
+  color: var(--color-red);
+}

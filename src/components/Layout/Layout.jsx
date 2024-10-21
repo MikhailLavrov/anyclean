@@ -1,18 +1,16 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Layout, Spin } from 'antd';
-// import c from './Layout.module.scss';
+import c from './Layout.module.css';
 import { HeaderComponent } from '../Header/Header';
 // import { FooterComponent } from '../Footer/Footer';
-// import { MobileNavigation } from '../MobileNavigation/MobileNavigation';
 
 const { Content } = Layout;
 
 const LayoutComponent = () => {
 
   return (
-    <Layout>
-    {/* <Layout className={c.layout}> */}
+    <Layout className={c.layout}>
       <HeaderComponent />
       <Content>
         <Suspense 
@@ -29,7 +27,6 @@ const LayoutComponent = () => {
         </Suspense>
       </Content>
       {/* <FooterComponent /> */} <div>Подвал</div>
-      {/* <MobileNavigation /> */}
     </Layout>
   );
 }

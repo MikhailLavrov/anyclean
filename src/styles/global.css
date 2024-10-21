@@ -1,5 +1,5 @@
-@use '_vars' as *; 
-@use '_mixins' as *;
+@import 'vars.css'; 
+@import 'm-queries.css';
 
 html,
 body {
@@ -11,7 +11,7 @@ body {
 
 header,
 footer {
-  font-family: $ff-tilda;
+  font-family: var(--ff-tilda);
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -20,7 +20,7 @@ footer {
 body {
   margin: 0;
 
-  font-family: $ff-tilda;
+  font-family: var(--ff-tilda);
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -30,12 +30,12 @@ body {
   
   display: flex;
   flex-direction: column;
-  background-color: $base-light-color;
+  background-color: var(--base-light-color);
 }
 
 a,
 button {
-  font-family: $ff-tilda;
+  font-family: var(--ff-tilda);
 }
 
 #root {
@@ -51,17 +51,18 @@ img {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
-  padding: 0 $primary-indent;
+  padding: 0 var(--primary-indent);
 
-  max-width: calc($vp-768 + $primary-indent * 2);
+  max-width: calc(var(--vp-768) + var(--primary-indent) * 2);
   height: 100%;
   
-  @include vp-768 {
-    padding: 0 $secondary-indent;
+  @media (min-width: 768px) {
+    padding: 0 var(--secondary-indent);
   
-    max-width: calc($vp-1380 + $secondary-indent * 2);
-  }
+    max-width: calc(var(--vp-1380) + var(--secondary-indent) * 2);
+  };
 }
 
 .visually-hidden {

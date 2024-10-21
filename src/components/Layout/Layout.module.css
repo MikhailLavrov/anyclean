@@ -1,0 +1,9 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.layout {
+  margin: 0 auto;
+  padding: 0;
+
+  height: 100%;
+}

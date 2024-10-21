@@ -1,0 +1,28 @@
+@import 'vars.css'; 
+
+/* Retina */
+@media (min-resolution: var(--retina-dpi)), (min-resolution: var(--retina-dppx)) {
+  /* Стили для устройств с высоким разрешением */
+}
+
+/* Mobile first */
+
+/* vp-500 */
+@media (min-width: var(--vp-500)) {
+  /* Стили для ширины 500px и больше */
+}
+
+/* vp-768 */
+@media (min-width: var(--vp-768)) {
+  /* Стили для ширины 768px и больше */
+}
+
+/* vp-1260 */
+@media (min-width: var(--vp-1260)) {
+  /* Стили для ширины 1260px и больше */
+}
+
+/* vp-1600 */
+@media (min-width: var(--vp-1600)) {
+  /* Стили для ширины 1600px и больше */
+}

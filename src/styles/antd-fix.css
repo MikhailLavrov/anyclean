@@ -1,5 +1,5 @@
-@use '_vars' as *;
-@use '_mixins' as *;
+@import 'vars.css';
+@import 'm-queries.css';
 
 .ant-modal,
 .ant-segmented,
@@ -7,7 +7,7 @@
 .ant-drawer,
 .ant-tabs,
 .ant-btn {
-  font-family: $ff-tilda;
+  font-family: var(--ff-tilda);
 }
 
 .ant-menu-submenu-title {
@@ -24,26 +24,25 @@
 }
 
 .catalogCardModal__tabs {
-  font-size: $fz-s;
+  font-size: var(--fz-s);
+}
   
-  @include vp-500 {
-    
-    & .ant-tabs-tab {
-      margin-left: 25px !important;
-      font-size: calc($fz-m - 2px);
-      
-      & .ant-tabs-tab-icon {
-        margin-right: 5px !important;
-      }
-    }
-  }
-
-  @include vp-768 {
-    font-size: calc($fz-m - 2px);
-  }
-
-  & .ant-tabs-nav-list {
+.catalogCardModal__tabs .ant-tabs-nav-list {
+  @media (min-width: 768px) {
     margin: 0 auto !important;
+  }
+}
+
+.catalogCardModal__tabs .ant-tabs-tab {
+  @media (min-width: 500px) {
+    margin-left: 25px !important;
+    font-size: calc(var(--fz-m) - 2px);
+  }
+};
+  
+.catalogCardModal__tabs .ant-tabs-tab .ant-tabs-tab-icon {
+  @media (min-width: 500px) {
+    margin-right: 5px !important;
   }
 }
 
@@ -68,10 +67,8 @@
   transform: translateX(10px);
 }
 
-.callMeBack__modal {
-  & .ant-modal-header {
-    margin-bottom: 20px;
-  }
+.callMeBack__modal .ant-modal-header {
+  margin-bottom: 20px;
 }
 
 /* Блокировка скролла при открытом Drawer */

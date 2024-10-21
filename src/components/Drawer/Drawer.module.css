@@ -1,0 +1,10 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.burger__button {
+  margin-left: auto;
+  
+  @media (min-width: 1024px) {
+    display: none;
+  };
+}
