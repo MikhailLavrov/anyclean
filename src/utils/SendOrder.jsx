@@ -1,5 +1,5 @@
-const CHAT_ID='-1002006231945'
-const BOT_TOKEN='7103517816:AAG86TXNqQRxBOFDdwQkKe7Bs__cKgo9H1w'
+const CHAT_ID=''
+const BOT_TOKEN=''
 
 export const sendOrder = async ({message}) => {
   const BASE_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;

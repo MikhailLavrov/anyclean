@@ -1,0 +1,30 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.footer {
+  padding: 10px 0;
+
+  width: 100%;
+  min-height: 60px;
+  
+  display: flex;
+  align-items: center;
+
+  /* background-color: var(--base-light-color); */
+  background-color: #D4CECE;
+  
+  @media (min-width: 1260px) {
+    min-height: 80px;
+  };
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+
+  font-size: calc(var(--fz-s) - 2px);
+  
+  @media (min-width: 1260px) {
+    font-size: var(--fz-s)
+  };
+}

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import { useEffect, useState } from "react";
 import c from './CallbackForm.module.css';
-import { sendOrder } from "../../utils/SendOrder";
+// import { sendOrder } from "../../utils/SendOrder";
 
 export const CallbackForm = ({ outerHandler }) => {
   const {
@@ -25,11 +25,12 @@ export const CallbackForm = ({ outerHandler }) => {
   const onSubmit = (data) => {
     let message = `Заявка на обратный звонок\n Имя: ${data.name}\n Телефон: ${data.phone}\n`;
     
-    sessionStorage.setItem('submitted', 'true');
+    // sessionStorage.setItem('submitted', 'true');
+    console.log(message)
     setIsSubmitted(true);
-    outerHandler && outerHandler();
-    sendOrder({message});
-    reset();
+    // outerHandler && outerHandler();
+    // sendOrder({message});
+    // reset();
   }
 
   return (
@@ -41,7 +42,12 @@ export const CallbackForm = ({ outerHandler }) => {
           <p className={c.callback__submitSubtitle}>Мы вам перезвоним</p>
         </div>
       )
-    : <form 
+    : <>
+      <div className={c.formHeader}>
+        <p className={c.formHeader__title}>Скидка 10 % на первый заказ</p>
+        <p className={c.formHeader__subtitle}>Оставьте заявку прямо сейчас</p>
+      </div>
+      <form 
         onSubmit={handleSubmit(onSubmit)}
         className={c.form}
         autoComplete='false'
@@ -100,6 +106,7 @@ export const CallbackForm = ({ outerHandler }) => {
 
         <input type="submit" disabled={!isValid} />
       </form>
+    </>
     }
   </div>
   )
