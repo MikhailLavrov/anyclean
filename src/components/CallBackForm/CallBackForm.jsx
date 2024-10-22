@@ -7,7 +7,7 @@ export const CallbackForm = ({ outerHandler }) => {
   const {
     register,
     handleSubmit,
-    reset,
+    // reset,
     formState: { errors, isValid },
   } = useForm({
     mode: 'onChange',

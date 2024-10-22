@@ -1,0 +1,43 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.socials__link {
+  padding: 10px;
+
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: var(--fz-s);
+  
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  transition: all 250ms ease-in-out;
+
+  & img {
+    border-radius: 50%;
+  }
+}
+
+.socials__linkTelegram {
+  border-color: #2AABEE;
+  color: #2AABEE;
+
+  &:hover {
+    background-color: #2AABEE;
+    color: #fff;
+  }
+}
+
+.socials__linkWhatsapp {
+  border-color: #128C7E;
+  color: #128C7E;
+
+  &:hover {
+    background-color: #128C7E;
+    color: #fff;
+  }
+}

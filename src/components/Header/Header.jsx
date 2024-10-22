@@ -1,45 +1,48 @@
 import c from './Header.module.css';
 import { DrawerComponent } from './../Drawer/Drawer';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const headerMenu = [
   {
     title: 'Главная',
-    href: '#home',
-    key: 'home',
+    key: '',
   },
   {
-    title: 'Услуги',
-    href: '#services',
-    key: 'services',
-  },
-  {
-    title: 'Цены',
-    href: '#price',
+    title: 'Услуги и цены',
     key: 'price',
   },
   {
-    title: 'Ответы на вопросы',
-    href: '#questions',
+    title: 'Часто задаваемые вопросы',
     key: 'questions',
   },
   {
     title: 'Контакты',
-    href: '#contacts',
     key: 'contacts',
   },
 ];
 
 export const HeaderComponent = () => {
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    navigate('', { replace: true });
+  };
+
   const menuItems = headerMenu.map((item, i) => {
     return (
       <li className={c.header__menuItem} key={i}>
-        <Link to={item.link}>
-          {item.title}
-        </Link>
+        {item.key.length !== 0 ? (
+          <a href={`#${item.key}`}>{item.title}</a>
+        ) : (
+          <span onClick={scrollToTop}>{item.title}</span>
+        )}
       </li>
-    )
-  })
+    );
+  });
 
   return (
     <header className={c.header}>
@@ -50,5 +53,5 @@ export const HeaderComponent = () => {
         <DrawerComponent />
       </div>
     </header>
-  )
-}
+  );
+};

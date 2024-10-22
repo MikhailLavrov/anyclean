@@ -4,7 +4,7 @@ import LOGO_IMG from '../../assets/logo_sub.svg';
 export const HeroComponent = () => {
   return (
     <section className={c.hero}>
-    <div className={`${c.hero__container} container`}>
+      <div className={`${c.hero__container} container`}>
         <div className={c.logo}>
           <img width={200} src={LOGO_IMG} alt='Logo' />
         </div>

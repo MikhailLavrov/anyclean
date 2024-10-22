@@ -2,11 +2,15 @@
 @import '../../styles/m-queries.css';
 
 .hero {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 
   background-color: var(--base-light-color);
 
   font-family: var(--ff-tilda);
+  
+  @media (min-width: 768px) {
+    padding: 40px 0;
+  };
 }
 
 .hero__container {
