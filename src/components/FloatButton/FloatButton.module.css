@@ -1,0 +1,16 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.floatButton {
+  position: fixed;
+  right: 15px;
+  bottom: 62px;
+
+  z-index: 1;
+  cursor: pointer;
+
+  @media (min-width: 11260px) {
+    right: 24px;
+    bottom: 48px;
+  }
+}

@@ -1,7 +1,7 @@
 import c from './Contacts.module.css';
 import MAP from '../../assets/map.webp';
 import { ClockCircleOutlined, EnvironmentOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
-import { Socials } from '../Socials/Socials';
+import { SocialButtons } from '../SocialButtons/SocialButtons';
 
 export const ContactsComponent = () => {
   return (
@@ -28,9 +28,7 @@ export const ContactsComponent = () => {
               <MailOutlined />
               <a href="mailto:anyclean@mail.ru">anyclean@mail.ru</a>
             </div>
-            <div className={c.socialsWrapper}>
-              <Socials />
-            </div>
+            <SocialButtons wrapperClassName={c.socialsWrapper} />
           </div>
           <div className={c.contacts__map}>
             <img width={200} src={MAP} alt="Карта" />

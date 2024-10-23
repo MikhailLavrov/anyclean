@@ -56,3 +56,36 @@
     }
   }
 }
+
+.socialsWrapper {
+  margin-left: auto;
+  display: none;
+  align-items: center;
+  gap: 10px;
+
+  & a {
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: var(--fz-s);
+    color: #fff;
+
+    &:first-child {
+      background-color: #2aa9ee9c;
+
+      &:hover {
+        background-color: #2aa9eee7;
+      }
+    }
+    &:last-child {
+      background-color: #128c7ea1;
+
+      &:hover {
+        background-color: #128c7eef;
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    display: flex;
+  };
+}

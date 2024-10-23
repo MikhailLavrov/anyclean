@@ -7,6 +7,7 @@ import { PriceComponent } from '../Price/Price';
 import { QuestionsComponent } from '../Questions/Questions';
 import { StepsComponent } from '../Steps/Steps';
 import { ContactsComponent } from '../Contacts/Contacts';
+import { FloatButtonComponent } from './../FloatButton/FloatButton';
 
 const MainPage = () => {
   return (
@@ -18,6 +19,7 @@ const MainPage = () => {
       <StepsComponent />
       <QuestionsComponent />
       <ContactsComponent />
+      <FloatButtonComponent />
     </>
   );
 }
