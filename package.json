@@ -1,5 +1,6 @@
 {
   "name": "anyclean",
+  "homepage": "https://mikhaillavrov.github.io/anyclean",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

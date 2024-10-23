@@ -7,7 +7,6 @@ export const FooterComponent = () => {
     <footer className={c.footer}>
       <div className={`${c.footer__container} container`}>
         <div className={c.copyright}>Copyright © {currentYear} Any Clean</div>
-        <div className={c.developer}></div>
       </div>
     </footer>
   )

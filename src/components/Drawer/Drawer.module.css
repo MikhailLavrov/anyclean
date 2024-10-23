@@ -3,10 +3,6 @@
 
 .burger__button {
   margin-left: auto;
-  
-  @media (min-width: 1024px) {
-    display: none;
-  };
 }
 
 .drawerWrapper {
@@ -24,36 +20,42 @@
   list-style: none;
 }
 
-.menu__item {
+.menu__item a,
+.menu__item span {
+  padding: 10px;
 
-  & a, span {
-    display: inline-block;
-    padding: 10px;
-    
-    color: #000;
-    font-size: var(--fz-s);
-    font-weight: 500;
-  }
+  display: inline-block;
+
+  color: #000;
+  font-size: var(--fz-s);
+  font-weight: 500;
 }
 
 .socialsWrapper {
   padding: 10px;
+
   display: flex;
   align-items: center;
   gap: 10px;
+}
 
-  & a {
-    padding: 5px 10px;
-  }
+.socialsWrapper a {
+  padding: 5px 10px;
 }
 
 .phoneLink {
+  padding: 10px;
+  
   display: flex;
   gap: 5px;
   align-items: center;
   justify-content: flex-start;
-
-  padding: 10px;
   color: #000;
   font-size: var(--fz-s);
+}
+
+@media (min-width: 1024px) {
+  .burger__button {
+    display: none;
+  }
 }

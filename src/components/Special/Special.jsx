@@ -1,5 +1,4 @@
 import c from './Special.module.css';
-// import { Image } from 'antd';
 import { CallbackForm } from './../CallBackForm/CallBackForm';
 
 export const SpecialComponent = () => {

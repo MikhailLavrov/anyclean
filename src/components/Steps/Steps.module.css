@@ -7,10 +7,6 @@
   font-family: var(--ff-tilda);
 
   background-color: var(--base-light-color);
-
-  @media (min-width: 1024px) {
-    padding: 40px 0;
-  };
 }
 
 .steps__header {
@@ -20,25 +16,17 @@
   font-size: var(--fz-m);
   font-weight: 500;
   text-align: center;
-
-  @media (min-width: 1024px) {
-    font-weight: 600;
-  };
 }
 
 .steps__list {
   margin: 0;
   padding: 0;
-  list-style: none;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  @media (min-width: 1024px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: stretch;
-  };
+  list-style: none;
 }
 
 .steps__item {
@@ -47,26 +35,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   text-align: center;
-
+  
   border: 1px solid #D4CECE;
   border-radius: 5px;
-
-  @media (min-width: 1024px) {
-    padding: 30px;
-  };
 }
 
 .steps__itemHeader {
   margin-bottom: 10px;
-
+  
   display: flex;
   align-items: center;
   gap: 10px;
-
-  @media (min-width: 1024px) {
-    margin-bottom: 20px;
-  };
 }
 
 .steps__itemCount {
@@ -77,11 +58,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  
   font-size: var(--fz-m);
   font-weight: 600;
   color: var(--base-light-color);
-
+  
   background-color: #D4CECE;
   border-radius: 50%;
   box-shadow: inset 0 0 5px -3px #000;
@@ -91,10 +72,6 @@
   margin: 0;
 
   font-size: var(--fz-m);
-
-  @media (min-width: 1024px) {
-    font-weight: 500;
-  };
 }
 
 .steps__itemDescription {
@@ -102,8 +79,36 @@
 
   font-size: var(--fz-s);
   line-height: 1;
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .steps {
+    padding: 40px 0;
+  }
+
+  .steps__header {
+    font-weight: 600;
+  }
+
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
+
+  .steps__item {
+    padding: 30px;
+  }
+
+  .steps__itemHeader {
+    margin-bottom: 20px;
+  }
+
+  .steps__itemTitle {
+    font-weight: 500;
+  }
+
+  .steps__itemDescription {
     font-size: calc(var(--fz-m) - 2px);
-  };
+  }
 }

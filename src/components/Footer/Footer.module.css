@@ -10,21 +10,22 @@
   display: flex;
   align-items: center;
 
-  /* background-color: var(--base-light-color); */
   background-color: #D4CECE;
-  
-  @media (min-width: 1260px) {
-    min-height: 80px;
-  };
 }
 
 .footer__container {
   display: flex;
   align-items: center;
-
-  font-size: calc(var(--fz-s) - 2px);
   
-  @media (min-width: 1260px) {
+  font-size: calc(var(--fz-s) - 2px);
+}
+
+@media (min-width: 1260px) {
+  .footer {
+    min-height: 80px;
+  }
+
+  .footer__container {
     font-size: var(--fz-s)
-  };
+  }
 }
