@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/anyclean/static/css/main.bedbd643.css",
-    "main.js": "/anyclean/static/js/main.f5388b6d.js",
+    "main.css": "/anyclean/static/css/main.68c7d375.css",
+    "main.js": "/anyclean/static/js/main.1de6f2d7.js",
     "static/js/453.d15cc14f.chunk.js": "/anyclean/static/js/453.d15cc14f.chunk.js",
     "static/media/map.webp": "/anyclean/static/media/map.568b88771067e13efdbf.webp",
     "static/media/TildaSans-Light.woff": "/anyclean/static/media/TildaSans-Light.da05a6c07f6f161b6cd5.woff",
@@ -17,12 +17,12 @@
     "static/media/logo_sub.svg": "/anyclean/static/media/logo_sub.7e867168d8e831e435850054ecdfbb45.svg",
     "static/media/logo.svg": "/anyclean/static/media/logo.770f224eb9704b56e58e12779ae15fd5.svg",
     "index.html": "/anyclean/index.html",
-    "main.bedbd643.css.map": "/anyclean/static/css/main.bedbd643.css.map",
-    "main.f5388b6d.js.map": "/anyclean/static/js/main.f5388b6d.js.map",
+    "main.68c7d375.css.map": "/anyclean/static/css/main.68c7d375.css.map",
+    "main.1de6f2d7.js.map": "/anyclean/static/js/main.1de6f2d7.js.map",
     "453.d15cc14f.chunk.js.map": "/anyclean/static/js/453.d15cc14f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bedbd643.css",
-    "static/js/main.f5388b6d.js"
+    "static/css/main.68c7d375.css",
+    "static/js/main.1de6f2d7.js"
   ]
 }
