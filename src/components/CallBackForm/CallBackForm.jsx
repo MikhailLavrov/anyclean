@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form"
 import { useEffect, useState } from "react";
 import c from './CallbackForm.module.css';
+import { PrivacyModal } from "../PrivacyModal/PrivacyModal";
+import { personalAgreement } from "../../data/privacyData";
 // import { sendOrder } from "../../utils/SendOrder";
 
 export const CallbackForm = ({ outerHandler }) => {
@@ -100,7 +102,12 @@ export const CallbackForm = ({ outerHandler }) => {
               required: 'Необходимо подтверждение',
             }
           )} />
-          Соглашаюсь на обработку персональных данных
+          Соглашаюсь на 
+          <PrivacyModal
+            buttonName={'обработку персональных данных'}
+            title={'Пользовательское соглашение'}
+            text={personalAgreement}
+          />
           {errors?.callbackAgreement && <span className={c.form__error}>{errors?.callbackAgreement?.message || 'Необходимо подтверждение'}</span>}
         </label>
 

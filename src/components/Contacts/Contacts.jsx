@@ -2,6 +2,7 @@ import c from './Contacts.module.css';
 import MAP from '../../assets/map.webp';
 import { ClockCircleOutlined, EnvironmentOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
 import { SocialButtons } from '../SocialButtons/SocialButtons';
+import { contactsData } from './../../data/contactsData';
 
 export const ContactsComponent = () => {
   return (
@@ -12,21 +13,19 @@ export const ContactsComponent = () => {
           <div className={c.contacts__infoWrapper}>
             <div className={c.contacts__item}>
               <ClockCircleOutlined />
-              <p>с 7:00 до 21:00 без выходных</p>
+              <p>{contactsData.openingHours}</p>
             </div>
             <div className={c.contacts__item}>
               <MobileOutlined />
-              <a href="tel:+79160857799">+7 (916) 085-77-99</a>
+              <a href="tel:+79160857799">{contactsData.phone}</a>
             </div>
             <div className={c.contacts__item}>
               <EnvironmentOutlined />
-              <a href="yandexnavi://build_route_on_map?lat_to=55.614417&lon_to=37.481055">
-                Москва, Новомосковский административный округ, Филимонковский район, Московский, улица Хабарова, 2
-              </a>
+              <a href="yandexnavi://build_route_on_map?lat_to=55.614417&lon_to=37.481055">{contactsData.address}</a>
             </div>
             <div className={c.contacts__item}>
               <MailOutlined />
-              <a href="mailto:anyclean@mail.ru">anyclean@mail.ru</a>
+              <a href="mailto:anyclean@mail.ru">{contactsData.email}</a>
             </div>
             <SocialButtons wrapperClassName={c.socialsWrapper} />
           </div>

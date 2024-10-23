@@ -83,19 +83,37 @@
   }
 
   & .form__agreementLabel {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    /* display: grid; */
+    /* grid-template-columns: auto 1fr; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+
     column-gap: 5px;
     font-size: calc(var(--fz-s) - 3px);
     color: var(--base-light-color);
+
+    & button {
+      padding: 0;
+
+      line-height: 1;
+      color: #c6e5fc;
+      font-size: calc(var(--fz-s) - 3px);
+
+      &:hover {
+        color: cadetblue !important;
+      }
+    }
 
     & input {
       width: auto;
     }
 
     & .form__error {
-     grid-column: 1/-1; 
+     grid-column: 1/-1;
+     color: var(--color-red);
     }
   }
 
@@ -172,4 +190,4 @@
 
 .form__error {
   color: var(--color-red);
-}
+ }

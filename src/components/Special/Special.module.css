@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   
-  background-image: url('https://avatars.mds.yandex.net/i?id=9ff7e3403088b9878cf61b1e2c5f938a_l-8082166-images-thumbs&ref=rim&n=13&w=2048&h=1365');
+  /* background-image: url('https://avatars.mds.yandex.net/i?id=9ff7e3403088b9878cf61b1e2c5f938a_l-8082166-images-thumbs&ref=rim&n=13&w=2048&h=1365'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
     padding: 0 80px !important;
 
     min-height: 500px;
-    
+
     justify-content: flex-start;
   }
 }

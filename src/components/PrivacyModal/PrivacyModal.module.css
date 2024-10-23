@@ -1,0 +1,30 @@
+@import '../../styles/vars.css'; 
+@import '../../styles/m-queries.css';
+
+.privacyButton {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+  font-size: var(--fz-s);
+
+  &:hover {
+    background-color: transparent !important;
+    color: #000000ab !important;
+  }
+}
+
+.scrollButtonWrapper {
+  margin-bottom: 10px;
+
+  text-align: center;
+}
+
+
+
+@media (min-width: 1024px) {
+  .scrollButtonWrapper {
+    display: none;
+  }
+}
