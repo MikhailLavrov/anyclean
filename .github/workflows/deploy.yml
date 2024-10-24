@@ -29,7 +29,9 @@ jobs:
           REACT_APP_TELEGRAM_BOT_TOKEN: ${{ secrets.REACT_APP_TELEGRAM_BOT_TOKEN }}
 
       - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          GITHUB_TOKEN=${{ secrets.GH_TOKEN }} npm run deploy
+          npm run deploy
