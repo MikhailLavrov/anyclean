@@ -32,4 +32,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+          git config user.name "Mikhail Lavrov"
+          git config user.email "lavrov.fd@gmail.com"
           npm run deploy
