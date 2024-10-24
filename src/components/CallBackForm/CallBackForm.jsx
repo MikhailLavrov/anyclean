@@ -5,7 +5,7 @@ import { PrivacyModal } from "../PrivacyModal/PrivacyModal";
 import { personalAgreement } from "../../data/privacyData";
 import { sendOrder } from "../../utils/SendOrder";
 
-export const CallbackForm = ({ outerHandler }) => {
+export const CallbackForm = ({ outerHandler }) => { 
   const {
     register,
     handleSubmit,
