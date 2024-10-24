@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anyclean/static/css/main.c57ef5a6.css",
-    "main.js": "/anyclean/static/js/main.c5652ff9.js",
+    "main.js": "/anyclean/static/js/main.5d7f5da0.js",
     "static/js/453.d15cc14f.chunk.js": "/anyclean/static/js/453.d15cc14f.chunk.js",
     "static/media/map.webp": "/anyclean/static/media/map.568b88771067e13efdbf.webp",
     "static/media/TildaSans-Light.woff": "/anyclean/static/media/TildaSans-Light.da05a6c07f6f161b6cd5.woff",
@@ -18,11 +18,11 @@
     "static/media/logo.svg": "/anyclean/static/media/logo.770f224eb9704b56e58e12779ae15fd5.svg",
     "index.html": "/anyclean/index.html",
     "main.c57ef5a6.css.map": "/anyclean/static/css/main.c57ef5a6.css.map",
-    "main.c5652ff9.js.map": "/anyclean/static/js/main.c5652ff9.js.map",
+    "main.5d7f5da0.js.map": "/anyclean/static/js/main.5d7f5da0.js.map",
     "453.d15cc14f.chunk.js.map": "/anyclean/static/js/453.d15cc14f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c57ef5a6.css",
-    "static/js/main.c5652ff9.js"
+    "static/js/main.5d7f5da0.js"
   ]
 }
