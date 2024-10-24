@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import c from './CallbackForm.module.css';
 import { PrivacyModal } from "../PrivacyModal/PrivacyModal";
 import { personalAgreement } from "../../data/privacyData";
-// import { sendOrder } from "../../utils/SendOrder";
+import { sendOrder } from "../../utils/SendOrder";
 
 export const CallbackForm = ({ outerHandler }) => {
   const {
     register,
     handleSubmit,
-    // reset,
+    reset,
     formState: { errors, isValid },
   } = useForm({
     mode: 'onChange',
@@ -27,12 +27,11 @@ export const CallbackForm = ({ outerHandler }) => {
   const onSubmit = (data) => {
     let message = `Заявка на обратный звонок\n Имя: ${data.name}\n Телефон: ${data.phone}\n`;
     
-    // sessionStorage.setItem('submitted', 'true');
-    console.log(message)
+    sessionStorage.setItem('submitted', 'true');
     setIsSubmitted(true);
-    // outerHandler && outerHandler();
-    // sendOrder({message});
-    // reset();
+    outerHandler && outerHandler();
+    sendOrder({message});
+    reset();
   }
 
   return (

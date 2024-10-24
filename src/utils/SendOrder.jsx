@@ -1,5 +1,5 @@
-const CHAT_ID=''
-const BOT_TOKEN=''
+const CHAT_ID=process.env.REACT_APP_TELEGRAM_CHATID;
+const BOT_TOKEN=process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
 
 export const sendOrder = async ({message}) => {
   const BASE_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
