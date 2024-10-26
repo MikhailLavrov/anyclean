@@ -1,5 +1,4 @@
-@import '../../styles/vars.css'; 
-@import '../../styles/m-queries.css';
+@import '../../styles/vars.css';
 
 .special {
   min-height: 400px;
@@ -15,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  /* background-image: url('https://avatars.mds.yandex.net/i?id=9ff7e3403088b9878cf61b1e2c5f938a_l-8082166-images-thumbs&ref=rim&n=13&w=2048&h=1365'); */
+  background-color: grey;
+  background-image: url('../../assets/special_img.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

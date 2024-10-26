@@ -1,5 +1,4 @@
 @import '../../styles/vars.css'; 
-@import '../../styles/m-queries.css';
 
 .burger__button {
   margin-left: auto;
@@ -24,23 +23,18 @@
 .menu__item span {
   padding: 10px;
 
+  width: 100%;
+
   display: inline-block;
 
   color: #000;
-  font-size: var(--fz-s);
-  font-weight: 500;
+  font-size: calc(var(--fz-s) + 2px);
 }
 
 .socialsWrapper {
-  padding: 10px;
-
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.socialsWrapper a {
-  padding: 5px 10px;
 }
 
 .phoneLink {

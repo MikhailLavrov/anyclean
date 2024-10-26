@@ -1,5 +1,4 @@
 @import '../../styles/vars.css'; 
-@import '../../styles/m-queries.css';
 
 .callback {
   padding: 20px;
@@ -61,7 +60,6 @@
 
 .form {
   width: 100%;
-  /* max-width: 350px; */
   
   display: flex;
   flex-direction: column;
@@ -83,9 +81,6 @@
   }
 
   & .form__agreementLabel {
-    /* display: grid; */
-    /* grid-template-columns: auto 1fr; */
-    /* align-items: center; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -170,12 +165,7 @@
     &:disabled {
       pointer-events: none;
       user-select: none;
-      /* opacity: 0.5; */
     }
-
-    /* @include vp-1260 {
-      font-size: calc(var(--fz-m) - 3px);
-    } */
   }
 
   & textarea {

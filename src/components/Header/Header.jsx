@@ -2,7 +2,7 @@ import c from './Header.module.css';
 import { DrawerComponent } from './../Drawer/Drawer';
 import { headerMenu } from '../../data/menuData';
 import { MenuLink } from '../MenuLink/MenuLink';
-import { SocialButtons } from './../SocialButtons/SocialButtons';
+import { SocialLinks } from './../SocialLinks/SocialLinks';
 
 export const HeaderComponent = () => {
   const menuItems = headerMenu.map((item, i) => {
@@ -19,7 +19,9 @@ export const HeaderComponent = () => {
         <ul className={c.header__menu}>
           {menuItems}
         </ul>
-        <SocialButtons wrapperClassName={c.socialsWrapper}/>
+        <div className={c.socialsWrapper}>
+          <SocialLinks />
+        </div>
         <DrawerComponent />
       </div>
     </header>

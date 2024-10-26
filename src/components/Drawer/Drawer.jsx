@@ -6,7 +6,8 @@ import LOGO_IMG from '../../assets/logo.svg';
 import { MenuOutlined, MobileOutlined } from '@ant-design/icons';
 import { headerMenu } from './../../data/menuData';
 import { MenuLink } from '../MenuLink/MenuLink';
-import { SocialButtons } from './../SocialButtons/SocialButtons';
+import { SocialLinks } from './../SocialLinks/SocialLinks';
+import { contactsData } from '../../data/contactsData';
 
 export const DrawerComponent = () => {
   const [open, setOpen] = useState(false);
@@ -39,11 +40,13 @@ export const DrawerComponent = () => {
             {menuItems}
           </ul>
           <Divider />
-          <a className={c.phoneLink} href="tel:+79160857799">
+          <a className={c.phoneLink} href={`tel:${contactsData.phone}`}>
             <MobileOutlined />
-            +7 (916) 085-77-99
+            {contactsData.phoneMasked}
           </a>
-          <SocialButtons wrapperClassName={c.socialsWrapper}/>
+          <div className={c.socialsWrapper}>
+            <SocialLinks />
+          </div>
         </div>
       </Drawer>
     </>

@@ -7,22 +7,27 @@ import { FooterComponent } from '../Footer/Footer';
 
 const { Content } = Layout;
 
+const FallbackComponent = () => {
+  const styles = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  };
+
+  return (
+    <div className='container' style={styles}>
+      <Spin size="large" />
+    </div>
+  )
+}
+
 export const LayoutComponent = () => {
 
   return (
     <Layout className={c.layout}>
       <HeaderComponent />
       <Content>
-        <Suspense 
-          fallback={
-            <div 
-              className='container' 
-              style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-            >
-              <Spin size="large" />
-            </div>
-          }
-        >
+        <Suspense fallback={<FallbackComponent />}>
           <Outlet />
         </Suspense>
       </Content>

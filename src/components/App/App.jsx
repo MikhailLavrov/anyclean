@@ -29,7 +29,6 @@ export const App = () => {
     <Routes>
       <Route path='/' element={<LayoutComponent /> }>
         <Route index element={<MainPage />} />
-        {/* <Route path="abc" element={<AbcPage />} /> */}
       </Route>
     </Routes>
   )

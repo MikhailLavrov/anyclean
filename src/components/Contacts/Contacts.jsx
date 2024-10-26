@@ -1,10 +1,17 @@
 import c from './Contacts.module.css';
 import MAP from '../../assets/map.webp';
 import { ClockCircleOutlined, EnvironmentOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
-import { SocialButtons } from '../SocialButtons/SocialButtons';
+import { SocialLinks } from '../SocialLinks/SocialLinks';
 import { contactsData } from './../../data/contactsData';
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 export const ContactsComponent = () => {
+  
+  const mapLink = isMobile
+  ? `yandexnavi://build_route_on_map?lat_to=${contactsData.lat}&lon_to=${contactsData.lon}`
+  : `https://yandex.ru/maps/?rtext=~${contactsData.lat},${contactsData.lon}`;
+  
   return (
     <section className={c.contacts} id='contacts'>
       <div className={`${c.contacts__container} container`}>
@@ -17,17 +24,21 @@ export const ContactsComponent = () => {
             </div>
             <div className={c.contacts__item}>
               <MobileOutlined />
-              <a href="tel:+79160857799">{contactsData.phone}</a>
+              <a href={`tel:${contactsData.phone}`}>{contactsData.phoneMasked}</a>
             </div>
             <div className={c.contacts__item}>
               <EnvironmentOutlined />
-              <a href="yandexnavi://build_route_on_map?lat_to=55.614417&lon_to=37.481055">{contactsData.address}</a>
+              <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                {contactsData.address}
+              </a>
             </div>
             <div className={c.contacts__item}>
               <MailOutlined />
-              <a href="mailto:anyclean@mail.ru">{contactsData.email}</a>
+              <a href={`mailto:${contactsData.email}`}>{contactsData.email}</a>
             </div>
-            <SocialButtons wrapperClassName={c.socialsWrapper} />
+            <div className={c.socialsWrapper}>
+              <SocialLinks />
+            </div>
           </div>
           <div className={c.contacts__map}>
             <img width={200} src={MAP} alt="Карта" />

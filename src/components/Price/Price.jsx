@@ -1,70 +1,7 @@
+import { addPriceData, mainPriceData } from '../../data/priceData';
 import c from './Price.module.css';
 import { Popover } from 'antd';
-
-const mainPriceData = [
-  {
-    title: 'Поддерживающая уборка',
-    price: '280',
-    description: `Протирание подоконников и поверхностей мебели
-    Протирание всех стеклянных и зеркальных поверхностей
-    Чистка ковровых покрытий 
-    Мытье  полов
-    Вынос  мусора 
-    Уборка  санузла`,
-  },
-  {
-    title: 'Генеральная уборка', 
-    price: '300',
-    description: `Весь перечень « Поддерживающей»   + дополнительно:
-
-    Обеспыливание люстр и светильников
-    Мытьё труб и батарей отопления
-    Обеспыливание бытовой и  орг. техники
-    Очищение внешних поверхностей всей кухонной техники
-    Мытье  сантехники
-    Протирка  смесителей`,
-  },
-  {
-    title: 'Уборка после ремонта', 
-    price: '450',
-    description: `Обеспыливание стен,  дверей и пола
-    Мытье стен,  дверей, плинтусов, полов
-    Мытье подоконников и батарей отопления
-    Мытьё зеркальных и стеклянных поверхностей 
-    Вынос мусора до 10 кг`,
-  },
-];
-
-const addPriceData = [
-  {
-    title: 'Химчистка мебели', 
-    price: '2000'
-  },
-  {
-    title: 'Погладить вещи', 
-    price: '2500'
-  },
-  {
-    title: 'Мойка окна', 
-    price: '1500'
-  },
-  {
-    title: 'Мойка люстры', 
-    price: '750'
-  },
-  {
-    title: 'Мойка холодильника', 
-    price: '950'
-  },
-  {
-    title: 'Мойка духового шкафа', 
-    price: '750'
-  },
-  {
-    title: 'Мойка микроволновой печи', 
-    price: '650'
-  },
-];
+import PRICE_IMG from '../../assets/price_img.webp';
 
 export const PriceComponent = () => {
   const mainPriceItems = mainPriceData.map((item, i) => (
@@ -117,7 +54,7 @@ export const PriceComponent = () => {
           <div className={c.price__imageWrapper}>
             <img
               width={200}
-              src="https://any-clean.ru/thumb/2/MAMyoiKo_jBC5UyEvzBNow/1200r/d/snimok_ekrana_2023-05-25_v_102935.png"
+              src={PRICE_IMG}
               alt="Cleaning"
             />
           </div>
