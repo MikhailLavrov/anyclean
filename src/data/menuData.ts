@@ -1,4 +1,9 @@
-export const headerMenu = [
+export interface HeaderMenuItem {
+  title: string;
+  key: string;
+}
+
+export const headerMenu: HeaderMenuItem[] = [
   {
     title: 'Главная',
     key: '',

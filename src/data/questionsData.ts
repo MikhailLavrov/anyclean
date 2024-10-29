@@ -1,4 +1,9 @@
-export const questionsData = [
+interface Question {
+  question: string;
+  answer: string;
+};
+
+export const questionsData: Question[] = [
   {
     question: "За какое время оформляется заказ?",
     answer: "Заявку на уборку желательно оставлять за 1 - 2 дня. Если же требуется срочный выезд, мы приложим максимум усилий, чтобы выполнить заказ в самые сжатые сроки при наличии свободной бригады.",

@@ -7,7 +7,7 @@ export const HeroComponent = () => {
     <section className={c.hero}>
       <div className={`${c.hero__container} container`}>
         <div className={c.logo}>
-          <img width={200} src={LOGO_IMG} alt='Logo' />
+          <img width={200} src={LOGO_IMG} alt='Логотип' />
         </div>
         <div className={c.contacts}>
           <div className={c.phone}>

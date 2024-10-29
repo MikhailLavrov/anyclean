@@ -2,8 +2,8 @@ import { stepsData } from '../../data/stepsData';
 import c from './Steps.module.css';
 
 export const StepsComponent = () => {
-  const steps = stepsData.map((item, i) => (
-    <li className={c.steps__item} key={i}>
+  const steps: JSX.Element[] = stepsData.map((item, i: number) => (
+    <li className={c.steps__item} key={item.title}>
       <div className={c.steps__itemHeader}>
         <div className={c.steps__itemCount}>{i + 1}</div>
         <p className={c.steps__itemTitle}>{item.title}</p>

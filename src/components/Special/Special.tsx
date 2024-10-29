@@ -1,5 +1,5 @@
 import c from './Special.module.css';
-import { CallbackForm } from './../CallBackForm/CallBackForm';
+import { CallbackForm } from '../CallBackForm/CallBackForm';
 
 export const SpecialComponent = () => {
   return (

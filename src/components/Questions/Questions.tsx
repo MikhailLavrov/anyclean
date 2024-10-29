@@ -3,7 +3,7 @@ import c from './Questions.module.css';
 import { Collapse } from 'antd';
 
 export const QuestionsComponent = () => {
-  const items = questionsData.map((item) => ({
+  const items: { label: JSX.Element; children: JSX.Element }[] = questionsData.map((item) => ({
     label: <p className={c.questions__question}>{item.question}</p>,
     children: <p className={c.questions__answer}>{item.answer}</p>,
   }));

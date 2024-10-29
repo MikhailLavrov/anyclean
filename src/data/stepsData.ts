@@ -1,4 +1,9 @@
-export const stepsData = [
+interface Steps {
+  title: string;
+  description: string;
+};
+
+export const stepsData: Steps[] = [
   {
     title: 'Заявка',
     description: 'Заполните форму заявки на сайте, чтобы получить скидку 10% на первый заказ',

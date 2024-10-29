@@ -2,13 +2,13 @@ import c from './Contacts.module.css';
 import MAP from '../../assets/map.webp';
 import { ClockCircleOutlined, EnvironmentOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
 import { SocialLinks } from '../SocialLinks/SocialLinks';
-import { contactsData } from './../../data/contactsData';
+import { contactsData } from '../../data/contactsData';
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 export const ContactsComponent = () => {
   
-  const mapLink = isMobile
+  const mapLink: string = isMobile
   ? `yandexnavi://build_route_on_map?lat_to=${contactsData.lat}&lon_to=${contactsData.lon}`
   : `https://yandex.ru/maps/?rtext=~${contactsData.lat},${contactsData.lon}`;
   

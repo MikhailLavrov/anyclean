@@ -5,7 +5,7 @@ import PRICE_IMG from '../../assets/price_img.webp';
 
 export const PriceComponent = () => {
   const mainPriceItems = mainPriceData.map((item, i) => (
-    <li className={c.price__item} key={i}>
+    <li className={c.price__item} key={item.title}>
       <p className={c.price__itemTitle}>
         {item.title}
         {item.description && 

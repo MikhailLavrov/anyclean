@@ -1,7 +1,11 @@
 const CHAT_ID=process.env.REACT_APP_TELEGRAM_CHATID;
 const BOT_TOKEN=process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
 
-export const sendOrder = async ({message}) => {
+interface MessageProps {
+  message: string;
+}
+
+export const sendOrder = async ({message}: MessageProps) => {
   const BASE_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
   const POST_REQUEST_URL = `${BASE_URL}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
 

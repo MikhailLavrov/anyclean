@@ -1,17 +1,23 @@
-import { useForm } from "react-hook-form"
+import { useForm, SubmitHandler } from "react-hook-form"
 import { useEffect, useState } from "react";
 import c from './CallbackForm.module.css';
 import { PrivacyModal } from "../PrivacyModal/PrivacyModal";
 import { personalAgreement } from "../../data/privacyData";
 import { sendOrder } from "../../utils/SendOrder";
 
-export const CallbackForm = ({ outerHandler }) => { 
+interface FormData {
+  name: string;
+  phone: string;
+  callbackAgreement: boolean;
+}
+
+export const CallbackForm = () => { 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isValid },
-  } = useForm({
+  } = useForm<FormData>({
     mode: 'onChange',
   })
 
@@ -24,12 +30,11 @@ export const CallbackForm = ({ outerHandler }) => {
     }
   }, []);
   
-  const onSubmit = (data) => {
+  const onSubmit: SubmitHandler<FormData> = (data) => {
     let message = `Заявка на обратный звонок\n Имя: ${data.name}\n Телефон: ${data.phone}\n`;
     
     sessionStorage.setItem('submitted', 'true');
     setIsSubmitted(true);
-    outerHandler && outerHandler();
     sendOrder({message});
     reset();
   }

@@ -16,13 +16,12 @@ const FallbackComponent = () => {
 
   return (
     <div className='container' style={styles}>
-      <Spin size="large" />
+      <Spin size="large" aria-label="Loading..." />
     </div>
   )
 }
 
 export const LayoutComponent = () => {
-
   return (
     <Layout className={c.layout}>
       <HeaderComponent />

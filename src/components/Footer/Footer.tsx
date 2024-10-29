@@ -10,7 +10,9 @@ export const FooterComponent = () => {
   return (
     <footer className={c.footer}>
       <div className={`${c.footer__container} container`}>
-        <div className={c.copyright}>Copyright © {currentYear} {contactsData.companyName}</div>
+        <div className={c.copyright}>
+          Copyright © {currentYear} {contactsData.companyName}
+        </div>
         <div>
           <PrivacyModal
             buttonName={'Политика конфиденциальности'}
