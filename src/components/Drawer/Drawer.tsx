@@ -18,7 +18,7 @@ export const DrawerComponent = () => {
   const onClose = () => {
     setOpen(false);
   };
-  const menuItems = headerMenu.map((item, i) => {
+  const menuItems: JSX.Element[] = headerMenu.map((item, i) => {
     return (
       <li className={c.menu__item} key={item.key}>
         <MenuLink

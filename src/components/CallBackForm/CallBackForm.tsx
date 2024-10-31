@@ -115,7 +115,7 @@ export const CallbackForm = () => {
           {errors?.callbackAgreement && <span className={c.form__error}>{errors?.callbackAgreement?.message || 'Необходимо подтверждение'}</span>}
         </label>
 
-        <input type="submit" disabled={!isValid} />
+        <input className={c.submitButton} type="submit" disabled={!isValid} />
       </form>
     </>
     }

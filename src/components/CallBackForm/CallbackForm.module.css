@@ -12,7 +12,7 @@
 
   font-family: var(--ff-tilda);
   
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
@@ -94,7 +94,7 @@
       padding: 0;
 
       line-height: 1;
-      color: #c6e5fc;
+      color: var(--color-light-blue);
       font-size: calc(var(--fz-s) - 3px);
 
       &:hover {
@@ -181,3 +181,9 @@
 .form__error {
   color: var(--color-red);
  }
+
+.submitButton {
+  &:disabled {
+    opacity: 0.6;
+  }
+}

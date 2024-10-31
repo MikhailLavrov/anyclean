@@ -8,9 +8,9 @@ export const FloatButtonComponent = () => {
   const [visible, setVisible] = useState(false) 
   const navigate = useNavigate();
 
-  const indent = 800;
+  const indent: number = 800;
 
-  const toggleVisible = () => { 
+  const toggleVisible = (): void => { 
     const scrolled = document.documentElement.scrollTop; 
     if (scrolled > indent){ 
       setVisible(true) 
@@ -20,7 +20,7 @@ export const FloatButtonComponent = () => {
     } 
   }; 
 
-  const scrollToTop = () =>{ 
+  const scrollToTop = (): void =>{ 
     window.scrollTo({ top: 0, behavior: 'smooth' }); 
     navigate('', { replace: true });
   }; 

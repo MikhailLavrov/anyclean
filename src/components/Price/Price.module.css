@@ -5,7 +5,7 @@
 
   font-family: var(--ff-tilda);
 
-  background-color: #D4CECE;
+  background-color: var(--color-primary-bg);
 }
 
 .price__listContainer {
@@ -92,7 +92,7 @@
 
   cursor: pointer;
   border-radius: 50%;
-  background-color: #ffffff88;
+  background-color: var(--base-light-color);
 }
 
 @media (min-width: 768px) {

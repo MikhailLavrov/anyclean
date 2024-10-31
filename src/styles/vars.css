@@ -3,14 +3,28 @@
   --base-dark-color: #000000;
   --base-light-color: #ffffff;
 
+  /* Primary */
+  --color-primary-bg: #F7F3F0; /* мягкий кремовый оттенок */
+  --color-primary-text: #4A403A; /* теплый тёмно-коричневый для контраста */
+  --color-primary-headers: #876F5B; /* приглушенный оттенок какао */
+  /* Accent */
+  --color-accent-1: #D1BFA9; /* нежный бежево-розовый, напоминает вспененное молоко */
+  --color-accent-2: #B39E8D; /* серо-коричневый, для второстепенных элементов и фонов */
+  --color-accent-3: #E6DED6; /* светлый оттенок слоновой кости */
+  /* Additional colors */
+  --color-additional-1: #EFE6E0; /* светлый кофейный для выделения определённых областей на фоне */
+  --color-additional-2: #EACBC5; /* лёгкий пастельный розовый для более мягкого эффекта */
+  --color-additional-3: #C5A794; /* слегка более насыщенный, чем основной акцент */
+  
   --color-grey: #cdcdcd;
   --color-red: #f93d04;
   --color-red-light: #fd6638;
   --color-orange: #fd7514;
+  --color-light-blue: #c6e5fc;
 
   /* socials palette */
-  --color-telegram-blue: #2AABEE;
-  --color-whatsapp-green: #2BB741;
+  --color-telegram-blue: #2aabee;
+  --color-whatsapp-green: #2bb741;
 
   /* Indents */
   --primary-indent: 10px;

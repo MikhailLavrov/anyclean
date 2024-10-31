@@ -5,7 +5,7 @@
 
   font-family: var(--ff-tilda);
   
-  background: linear-gradient(#fff, #D4CECE 50%);
+  background: linear-gradient(var(--color-primary-bg) 50%, var(--base-light-color));
 }
 
 .special__container {
@@ -14,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
-  background-image: url('../../assets/special_img.webp');
+  background-color: var(--color-accent-1);
+  background-image: url('../../assets/special_img2.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

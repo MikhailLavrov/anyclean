@@ -5,6 +5,7 @@
 
   font-family: var(--ff-tilda);
   background-color: var(--base-light-color);
+  color: var(--color-primary-text);
 }
 
 .contacts__header {
@@ -39,7 +40,7 @@
 .contacts__item * {
   margin: 0;
 
-  color: var(--base-dark-color);
+  color: var(--color-primary-text);
   line-height: 1;
 }
 

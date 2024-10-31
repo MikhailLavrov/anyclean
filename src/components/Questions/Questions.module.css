@@ -2,6 +2,9 @@
 
 .questions {
   padding: 30px 0;
+
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-text);
 }
 
 .questions__header {

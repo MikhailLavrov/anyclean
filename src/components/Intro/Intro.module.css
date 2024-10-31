@@ -4,6 +4,7 @@
   padding: 40px 0;
 
   font-family: var(--ff-tilda);
+  color: var(--color-primary-text);
 
   background-color: var(--base-light-color);
 }

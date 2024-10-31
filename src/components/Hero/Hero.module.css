@@ -3,8 +3,9 @@
 .hero {
   padding-bottom: 40px;
 
-  background-color: var(--base-light-color);
+  background-color: var(--color-primary-bg);
   font-family: var(--ff-tilda);
+  color: var(--color-primary-text);
 }
 
 .logo {
@@ -40,7 +41,7 @@
   font-size: var(--fz-m);
   font-weight: 600;
   text-decoration: none;
-  color: var(--base-dark-color);
+  color: var(--color-primary-text);
 }
 
 .openingHours__text {
