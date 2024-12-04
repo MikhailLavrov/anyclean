@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { LayoutComponent } from '../Layout/Layout';
-import { SpecialComponent } from '../Special/Special';
 import { HeroComponent } from '../Hero/Hero';
 import { IntroComponent } from '../Intro/Intro';
+import { AboutComponent } from '../About/About';
 import { PriceComponent } from '../Price/Price';
 import { QuestionsComponent } from '../Questions/Questions';
 import { StepsComponent } from '../Steps/Steps';
@@ -12,9 +12,9 @@ import { FloatButtonComponent } from '../FloatButton/FloatButton';
 const MainPage = () => {
   return (
     <>
-      <HeroComponent />
-      <SpecialComponent />
       <IntroComponent />
+      <HeroComponent />
+      <AboutComponent />
       <PriceComponent />
       <StepsComponent />
       <QuestionsComponent />
