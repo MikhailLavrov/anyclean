@@ -16,11 +16,18 @@
 
 .price__imageWrapper {
   display: none;
+  position: relative;
 
   & img {
     width: 100%;
     height: 100%;
     aspect-ratio: 2/1;
+  }
+
+  & form {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 

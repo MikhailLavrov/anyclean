@@ -2,8 +2,12 @@ import { addPriceData, mainPriceData } from '../../data/priceData';
 import c from './Price.module.css';
 import { Popover } from 'antd';
 import PRICE_IMG from '../../assets/price_img.webp';
+import { useState } from 'react';
 
 export const PriceComponent = () => {
+  const [imgSrc, setImgSrc] = useState(PRICE_IMG);
+  const [inputValue, setInputValue] = useState('');
+
   const mainPriceItems = mainPriceData.map((item, i) => (
     <li className={c.price__item} key={item.title}>
       <p className={c.price__itemTitle}>
@@ -32,6 +36,27 @@ export const PriceComponent = () => {
       <p className={c.price__itemPrice}>от {item.price} р</p>
     </li>
   ))
+
+  const ImageSourceSet = () => {
+    const onSubmitHandler = (e: React.FormEvent) => {
+      e.preventDefault();
+      setImgSrc(inputValue)
+    }
+
+    return (
+      <form
+        action=""
+        onSubmit={onSubmitHandler}
+      >
+        <input 
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <input type="submit" value={'ok'} />
+      </form>
+    )
+  }
   
   return (
     <section className={c.price} id='price'>
@@ -52,9 +77,10 @@ export const PriceComponent = () => {
             </div>
           </div>
           <div className={c.price__imageWrapper}>
+            {/* <ImageSourceSet /> */}
             <img
               width={200}
-              src={PRICE_IMG}
+              src={imgSrc}
               alt="Cleaning"
             />
           </div>
